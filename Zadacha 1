@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+
+int main()
+{
+	char buff[50];
+	setlocale(0, "");
+	ifstream fout("file.txt",ios_base::in);
+	while (!fout.eof())
+	{
+		fout >> buff;
+		cout << buff << endl;
+	}
+	system("pause");
+	fout.close();
+    return 0;
+}
